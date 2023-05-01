@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+body{
+  background: url(/images/bg-desktop.svg) no-repeat;
+  background-color: var(--Violet);
+  background-size: cover;
+  height: 100vh;
+  padding: 20px
+}
+
+main{
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+
+header {
+  height: 20%;
+  display: flex;
+}
+header img{
+  width: 80%;
+}
+
+section{ 
+  display: grid;
+  grid-template-columns: 55% 45%;
+  height: 70%;
+}
+
+.box-img{
+  height: 100%;
+}
+
+.box-img img{
+  width:  100%;
+  /* aspect-ratio: 1/1; */
+}
+
+.box-content{
+  padding: 2rem;
+}
+.box-content h1{
+  color: white;
+  font-family: 'Poppins' , Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.box-content p{
+  font-family: 'Open Sans' , Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+button{
+  width: 200px;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.411);
+  padding: 1rem 0;
+  border-radius: 2rem;
+  border: none;
+  color: var(--Violet);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+button:hover{
+  background-color: var(--Soft-Magenta);
+  color: white;
+
+}
+
+footer{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: end;
+  height: 10%;
+}
+footer i {
+  color: white;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+footer i:hover{
+  color: var(--Soft-Magenta);
+  border: 1px solid var(--Soft-Magenta);
+}
+
+
+@media (width < 1024px) {
+  .box-content h1{
+    font-size: 1.9rem;
+  }
+  .box-content p{
+    font-size: 1rem;
+  }
+  .box-img{
+    display: flex;
+    align-items: center;
+  }
+  .box-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (width < 768px) {
+  section{
+    display: flex;
+    flex-direction: column;
+  }
+  header{
+    height: 10%;
+  }
+  .box-img{
+    flex: 1;
+  }
+  section{
+    height: 80%;
+  }
+  .box-img img{
+    width: 70%;
+    margin: auto;
+  }
+  .box-content{
+    flex: 1;
+    text-align: center;
+  }
+  button{
+    margin: auto;
+  }
+  footer{
+    justify-content: center;
+  }
+}
+
+@media (width < 520px) {
+  .box-content h1{
+    font-size: 1.5rem;
+  }
+  .box-content p{
+    font-size: 0.8rem;
+  }
+  footer i{
+    font-size: 1rem;
+  }
+}
